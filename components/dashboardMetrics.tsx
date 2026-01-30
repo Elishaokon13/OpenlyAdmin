@@ -26,10 +26,10 @@ export function DashboardMetrics() {
           <span className="text-gray-400 text-xs sm:text-sm">Expenses</span>
           <span className="text-xl sm:text-2xl lg:text-2xl font-semibold text-white">$8,000,000</span>
         </div>
-        <div className="flex flex-col gap-1">
+        {/* <div className="flex flex-col gap-1">
           <span className="text-gray-400 text-xs sm:text-sm">Net Profit</span>
           <span className="text-xl sm:text-2xl lg:text-2xl font-semibold text-[#fca5a5]">$2,000,000</span>
-        </div>
+        </div> */}
       </div>
     </div>
   )
