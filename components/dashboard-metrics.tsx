@@ -8,7 +8,7 @@ export function DashboardMetrics() {
       <div className="flex flex-col gap-2">
         <div className="flex items-center gap-2 text-gray-400">
           <Wallet className="h-5 w-5" />
-          <span className="text-lg">Total V</span>
+          <span className="text-lg">Total Volume</span>
         </div>
         <div className="text-5xl md:text-4xl lg:text-5xl font-bold text-white">$6,810,240,900</div>
       </div>
