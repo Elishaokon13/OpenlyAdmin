@@ -36,6 +36,10 @@ export default function SystemOverviewPage() {
         ))}
       </div>
 
+      <div className="rounded-2xl border border-[#3b1d1d] bg-[#1a0f10] p-4 text-sm text-[#fca5a5]">
+        Critical: Provider Bankline latency breaches SLA for EU corridor. Automated retries enabled.
+      </div>
+
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
         <div className="xl:col-span-2 rounded-2xl border border-[#1F1F1F] bg-[#0D0D0D] p-6">
           <div className="flex items-center justify-between">
