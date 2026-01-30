@@ -59,7 +59,7 @@ export function Sidebar() {
           href="/events-webhooks"
           className={`${linkBaseClass} ${pathname === "/events-webhooks" ? linkActive : linkInactive}`}
         >
-          <Webhook className="h-6 w-6" />
+          <Webhook className="h-4 w-4" />
           <span className="text-sm font-medium tracking-wide">EVENTS & WEBHOOKS</span>
         </Link>
       </nav>
