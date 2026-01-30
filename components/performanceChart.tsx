@@ -20,10 +20,10 @@ const data = [
 
 export function PerformanceChart() {
   return (
-    <div className="flex flex-col gap-6 p-6 bg-[#0D0D0D] rounded-2xl">
+    <div className="flex flex-col gap-6 p-4 sm:p-6 bg-[#0D0D0D] rounded-2xl">
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 md:gap-2 lg:gap-4 flex-wrap">
         <div className="flex flex-col gap-2">
-          <h2 className="text-xl font-medium text-white">System-wide Payout Volume</h2>
+          <h2 className="text-lg sm:text-xl font-medium text-white">System-wide Payout Volume</h2>
           <div className="flex items-center gap-3 flex-wrap text-xs text-gray-400">
             <div className="flex items-center gap-2 px-3 py-1 bg-[#1A1A1A] rounded-full border border-[#333]">
               <div className="w-2 h-2 rounded-full bg-[#86efac]" />
@@ -40,12 +40,12 @@ export function PerformanceChart() {
           </div>
         </div>
         
-        <div className="flex items-center gap-4 md:gap-2 lg:gap-4">
+        <div className="flex flex-wrap items-center gap-3 md:gap-2 lg:gap-4">
           <div className="flex items-center bg-[#1A1A1A] rounded-lg p-1">
             {['1D', '1M', '3M', '6M', '1Y'].map((period) => (
               <button
                 key={period}
-                className={`px-3 md:px-2 lg:px-3 py-1 text-sm md:text-xs lg:text-sm rounded-md transition-colors ${
+                className={`px-2 sm:px-3 md:px-2 lg:px-3 py-1 text-xs sm:text-sm md:text-xs lg:text-sm rounded-md transition-colors ${
                   period === '6M' 
                     ? 'bg-[#2A2A2A] text-white shadow-sm' 
                     : 'text-gray-400 hover:text-white'
@@ -58,16 +58,16 @@ export function PerformanceChart() {
           
           <div className="flex items-center gap-2">
             <button className="p-2 text-gray-400 hover:text-white bg-[#1A1A1A] rounded-lg transition-colors">
-              <Calendar className="h-5 w-5" />
+              <Calendar className="h-4 w-4 sm:h-5 sm:w-5" />
             </button>
             <button className="p-2 text-gray-400 hover:text-white bg-[#1A1A1A] rounded-lg transition-colors">
-              <Download className="h-5 w-5" />
+              <Download className="h-4 w-4 sm:h-5 sm:w-5" />
             </button>
           </div>
         </div>
       </div>
 
-      <div className="h-[400px] w-full">
+      <div className="h-[260px] sm:h-[320px] lg:h-[400px] w-full">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart data={data}>
             <defs>
