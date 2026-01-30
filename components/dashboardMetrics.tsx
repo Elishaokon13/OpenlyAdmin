@@ -6,7 +6,8 @@ export function DashboardMetrics() {
   const metrics = [
     { label: "Volume", value: "$6.8M" },
     { label: "Revenue", value: "$10M" },
-    { label: "Expenses", value: "$8M" }
+    { label: "Expenses", value: "$8M" },
+    
   ]
 
   return (
