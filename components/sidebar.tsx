@@ -17,7 +17,7 @@ export function Sidebar() {
           href="/"
           className={`${linkBaseClass} ${pathname === "/" || pathname === "/system-overview" ? linkActive : linkInactive}`}
         >
-          <LayoutDashboard className="h-6 w-6" />
+          <LayoutDashboard className="h-4 w-6" />
           <span className="text-sm font-medium tracking-wide">SYSTEM OVERVIEW</span>
         </Link>
         <Link
