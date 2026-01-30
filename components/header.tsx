@@ -1,6 +1,6 @@
 "use client"
 
-import { FinbroLogo } from "@/components/finbro-logo"
+import { FinbroLogo } from "@/components/finbroLogo"
 import { Settings2, LogOut } from 'lucide-react'
 import {
   DropdownMenu,
