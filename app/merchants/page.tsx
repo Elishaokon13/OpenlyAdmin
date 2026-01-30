@@ -34,45 +34,47 @@ export default function MerchantsPage() {
         Warning: 18 merchants exceed payout failure thresholds. Reviews required before release.
       </div>
 
-      <div className="rounded-2xl border border-[#1F1F1F] bg-[#0D0D0D] p-6">
+      <div className="rounded-2xl border border-[#1F1F1F] bg-[#0D0D0D] p-4 sm:p-6">
         <div className="flex items-center justify-between">
           <h3 className="text-sm font-semibold text-white">Merchant Risk Queue</h3>
           <span className="text-xs text-[#919191]">Prioritized</span>
         </div>
-        <table className="mt-4 w-full text-sm">
-          <thead>
-            <tr className="text-[#919191] text-xs">
-              <th className="pb-3 text-left font-medium">Merchant</th>
-              <th className="pb-3 text-left font-medium">Risk</th>
-              <th className="pb-3 text-right font-medium">Exposure</th>
-              <th className="pb-3 text-right font-medium">Failure Rate</th>
-              <th className="pb-3 text-right font-medium">Holds</th>
-              <th className="pb-3 text-right font-medium">Next Review</th>
-            </tr>
-          </thead>
-          <tbody>
-            {merchants.map((merchant) => (
-              <tr key={merchant.id} className="border-t border-[#1F1F1F]">
-                <td className="py-3 text-white font-medium">{merchant.name}</td>
-                <td className="py-3">
-                  <span className={`inline-flex items-center rounded-full px-2 py-1 text-xs font-semibold ${
-                    merchant.risk === "high"
-                      ? "bg-[#2a1212] text-[#f87171]"
-                      : merchant.risk === "medium"
-                        ? "bg-[#2a1f0f] text-[#fbbf24]"
-                        : "bg-[#0f2917] text-[#86efac]"
-                  }`}>
-                    {merchant.risk}
-                  </span>
-                </td>
-                <td className="py-3 text-right text-white">{merchant.exposure}</td>
-                <td className="py-3 text-right text-[#fca5a5]">{merchant.failureRate}</td>
-                <td className="py-3 text-right text-white">{merchant.holds}</td>
-                <td className="py-3 text-right text-[#919191]">{merchant.review}</td>
+        <div className="-mx-4 sm:mx-0 mt-4 overflow-x-auto">
+          <table className="w-full min-w-[720px] text-sm">
+            <thead>
+              <tr className="text-[#919191] text-xs">
+                <th className="pb-3 text-left font-medium">Merchant</th>
+                <th className="pb-3 text-left font-medium">Risk</th>
+                <th className="pb-3 text-right font-medium">Exposure</th>
+                <th className="pb-3 text-right font-medium">Failure Rate</th>
+                <th className="pb-3 text-right font-medium">Holds</th>
+                <th className="pb-3 text-right font-medium">Next Review</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {merchants.map((merchant) => (
+                <tr key={merchant.id} className="border-t border-[#1F1F1F]">
+                  <td className="py-3 text-white font-medium">{merchant.name}</td>
+                  <td className="py-3">
+                    <span className={`inline-flex items-center rounded-full px-2 py-1 text-xs font-semibold ${
+                      merchant.risk === "high"
+                        ? "bg-[#2a1212] text-[#f87171]"
+                        : merchant.risk === "medium"
+                          ? "bg-[#2a1f0f] text-[#fbbf24]"
+                          : "bg-[#0f2917] text-[#86efac]"
+                    }`}>
+                      {merchant.risk}
+                    </span>
+                  </td>
+                  <td className="py-3 text-right text-white">{merchant.exposure}</td>
+                  <td className="py-3 text-right text-[#fca5a5]">{merchant.failureRate}</td>
+                  <td className="py-3 text-right text-white">{merchant.holds}</td>
+                  <td className="py-3 text-right text-[#919191]">{merchant.review}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </PageShell>
   )
