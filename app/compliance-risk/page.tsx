@@ -1,4 +1,4 @@
-import { PageShell } from "@/components/page-shell"
+import { PageShell } from "@/components/pageShell"
 
 export default function ComplianceRiskPage() {
   const metrics = [
