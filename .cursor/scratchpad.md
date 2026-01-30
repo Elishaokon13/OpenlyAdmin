@@ -22,16 +22,17 @@ Now focus on mobile responsiveness across the dashboard and all admin pages to e
 
 # Project Status Board
 - [x] Audit current mobile layout
-- [ ] Add mobile navigation access
+- [x] Add mobile navigation access
 - [ ] Improve metrics responsiveness
 - [ ] Make tables mobile-friendly
 - [ ] Verify responsive behavior across routes
 
 # Current Status / Progress Tracking
 Initial audit: sidebar hidden on mobile with no alternative navigation; tables are full-width without horizontal scroll; chart has fixed 400px height; metrics are large but generally stack.
+Added a mobile drawer menu using `Sheet` with `MobileNav` links in the header.
 
 # Executor's Feedback or Assistance Requests
-Step 1 complete. Please confirm so I can proceed to Step 2 (add mobile navigation access).
+Step 2 complete. Please confirm so I can proceed to Step 3 (improve metrics responsiveness).
 
 # Lessons
 None yet.
