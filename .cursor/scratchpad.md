@@ -1,45 +1,39 @@
 # Background and Motivation
 Adapt the existing dark-mode, multi-tab financial dashboard template into an internal admin and operations control panel for Openly. Preserve the visual system and component style while increasing data density and control visibility. This is a multi-page internal app for Operations, Finance, Compliance, and Engineering to monitor money movement, investigate failures, and manage risk.
+Now extend the remaining sidebar pages (Merchants, Ledger, Compliance & Risk, Providers, Events & Webhooks, etc.) beyond the main dashboard.
 
 # Key Challenges and Analysis
 - Need to find the existing template structure and pages to map new sections and navigation.
 - Must keep visual system consistent while increasing data density and action visibility.
 - Ensure operational UX requirements: explicit states, warnings for destructive actions, and auditability.
 - Multi-page app implies routing/navigation changes; may touch multiple components.
+- Need to add new routes/pages while keeping consistent layout and header/sidebar.
+- Each page needs meaningful operational content (no decorative charts).
 
 # High-level Task Breakdown
-1. Locate dashboard template pages, layout, and navigation.
-   - Success: Identify the main layout, nav, and dashboard page file(s) to edit.
-2. Update sidebar navigation to new admin tabs.
-   - Success: Sidebar renders the new labels in the correct order.
-3. Remap top metrics bar to new KPIs.
-   - Success: KPI cards show the specified labels and match existing styling.
-4. Repurpose main chart and table sections.
-   - Success: Chart titles/legends reflect payout volume, failures, provider health; table columns and row links map to global payouts and operational details.
-5. Add admin-only action affordances and warnings.
-   - Success: UI elements for freeze/retry/cancel/override with warning states and audit log timestamps are visible and consistent.
-6. Sanity check for data density and explicit states.
-   - Success: No decorative charts without operational meaning; labels and status chips are explicit.
+1. Inventory existing routes/pages and layout reuse points.
+   - Success: Identify where to add new pages and how layout is applied.
+2. Create page shells for each sidebar item.
+   - Success: Each route renders with header/sidebar and a page title.
+3. Populate each page with operational sections.
+   - Success: Each page has at least one metrics row and a dense table or panel relevant to the section.
+4. Ensure explicit states and warnings are present where needed.
+   - Success: Status chips, warnings, and audit hints appear on relevant pages.
+5. Sanity check data density and navigation.
+   - Success: No decorative charts; sidebar links map to actual pages.
 
 # Project Status Board
-- [x] Locate template layout/pages and nav
-- [x] Update sidebar navigation labels
-- [x] Update top metrics bar KPIs
-- [x] Repurpose chart and table sections
-- [x] Add admin-only actions with warnings/audit info
-- [x] Review for data density and explicit states
+- [ ] Inventory routes/layout for new pages
+- [ ] Create page shells for sidebar items
+- [ ] Populate each page with operational content
+- [ ] Add explicit state/warning affordances per page
+- [ ] Verify data density and navigation
 
 # Current Status / Progress Tracking
-Located primary dashboard and component files: `app/page.tsx`, `components/sidebar.tsx`, `components/dashboard-metrics.tsx`, `components/performance-chart.tsx`, `components/ticker-list.tsx`, and `components/header.tsx`.
-Repo hygiene: removed `auto-commit.sh` and `run.sh` from git tracking (files preserved locally).
-Sidebar updated with admin navigation: System Overview, Merchants, Global Payouts, Ledger, Compliance & Risk, Providers, Events & Webhooks.
-Top metrics bar updated to: Total Funds Under Management, Total Locked Funds, Provider Balances, Payout Queue Depth, Failed Payouts (24h).
-Main chart retitled to system-wide payout volume with successful vs failed payouts and provider health trends. Main table repurposed to global payouts with failure reasons, retry counts, provider, status, and lifecycle links.
-Admin actions added with destructive warnings and audit log fields (last action, timestamp, actor).
-Review notes: status chips remain explicit; user commented out failure reason, retries, and action buttons for now.
+Completed main dashboard remap and admin controls. Ready to extend remaining pages.
 
 # Executor's Feedback or Assistance Requests
-Step 6 complete. Do you want the commented-out failure reason/retry columns and admin action buttons restored for higher data density?
+Planner mode: awaiting executor to start new page extensions.
 
 # Lessons
 None yet.
