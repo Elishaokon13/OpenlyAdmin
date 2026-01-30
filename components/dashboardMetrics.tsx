@@ -4,7 +4,7 @@ import { Wallet } from 'lucide-react'
 
 export function DashboardMetrics() {
   const metrics = [
-    { label: "Total Volume", value: "$6.8M" },
+    { label: "Volume", value: "$6.8M" },
     { label: "Revenue", value: "$10M" },
     { label: "Expenses", value: "$8M" }
   ]
