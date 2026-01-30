@@ -30,6 +30,10 @@ export default function LedgerPage() {
         ))}
       </div>
 
+      <div className="rounded-2xl border border-[#3b2d1a] bg-[#20170a] p-4 text-sm text-[#fbbf24]">
+        Warning: 184 unreconciled ledger entries awaiting review. Settlement holds active.
+      </div>
+
       <div className="rounded-2xl border border-[#1F1F1F] bg-[#0D0D0D] p-6">
         <div className="flex items-center justify-between">
           <h3 className="text-sm font-semibold text-white">Recent Ledger Entries</h3>
