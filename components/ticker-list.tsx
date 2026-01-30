@@ -117,7 +117,7 @@ export function TickerList() {
             <th className="pb-4 text-left font-medium">Merchant</th>
             <th className="pb-4 text-right font-medium">Amount</th>
             <th className="pb-4 text-left font-medium">Provider</th>
-            <th className="pb-4 text-left font-medium">Failure Reason</th>
+            {/* <th className="pb-4 text-left font-medium">Failure Reason</th> */}
             <th className="pb-4 text-right font-medium">Retries</th>
             <th className="pb-4 text-left font-medium">Status</th>
             <th className="pb-4 text-right font-medium pr-2">Last Update</th>
