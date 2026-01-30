@@ -106,24 +106,24 @@ export function TickerList() {
         </div> */}
       </div>
       <div className="-mx-4 sm:mx-0 overflow-x-auto">
-        <table className="w-full min-w-[720px] sm:min-w-0">
+        <table className="w-full min-w-[680px] sm:min-w-0 table-fixed">
         <thead>
-          <tr className="text-[#919191] text-sm border-b border-transparent">
-            <th className="pb-4 text-left font-medium pl-2">
+          <tr className="text-[#919191] text-xs sm:text-sm border-b border-transparent">
+            <th className="pb-3 sm:pb-4 text-left font-medium pl-2 w-[140px] sm:w-auto">
               <div className="flex items-center gap-1 cursor-pointer hover:text-white transition-colors">
                 Payout ID
                 <ChevronsUpDown className="h-4 w-4" />
               </div>
             </th>
-            <th className="pb-4 text-left font-medium">Merchant</th>
-            <th className="pb-4 text-right font-medium">Amount</th>
-            <th className="pb-4 text-left font-medium">Provider</th>
+            <th className="pb-3 sm:pb-4 text-left font-medium w-[160px] sm:w-auto">Merchant</th>
+            <th className="pb-3 sm:pb-4 text-right font-medium w-[120px] sm:w-auto">Amount</th>
+            <th className="pb-3 sm:pb-4 text-left font-medium w-[120px] sm:w-auto">Provider</th>
             {/* <th className="pb-4 text-left font-medium">Failure Reason</th> */}
             {/* <th className="pb-4 text-right font-medium">Retries</th> */}
-            <th className="pb-4 text-left font-medium">Status</th>
+            <th className="pb-3 sm:pb-4 text-left font-medium w-[120px] sm:w-auto">Status</th>
             {/* <th className="pb-4 text-right font-medium pr-2">Last Update</th>
             <th className="pb-4 text-left font-medium">Last Action</th> */}
-            <th className="pb-4 text-left font-medium">Action Log</th>
+            <th className="pb-3 sm:pb-4 text-left font-medium w-[160px] sm:w-auto">Action Log</th>
           </tr>
         </thead>
         <tbody>
@@ -140,19 +140,19 @@ export function TickerList() {
               tabIndex={0}
               className="group transition-colors border-b border-transparent last:border-0 hover:bg-[#1A1A1A] cursor-pointer"
             >
-              <td className="py-4 pl-2 rounded-l-xl">
+              <td className="py-3 sm:py-4 pl-2 rounded-l-xl">
                 <div className="flex items-center gap-3">
-                  <span className="font-semibold text-white">{item.id}</span>
+                  <span className="font-semibold text-white truncate">{item.id}</span>
                 </div>
               </td>
-              <td className="py-4 text-left text-white font-medium">{item.merchant}</td>
-              <td className="py-4 text-right text-white font-medium">
+              <td className="py-3 sm:py-4 text-left text-white font-medium truncate">{item.merchant}</td>
+              <td className="py-3 sm:py-4 text-right text-white font-medium whitespace-nowrap">
                 {item.amount.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} {item.currency}
               </td>
-              <td className="py-4 text-left text-white font-medium">{item.provider}</td>
+              <td className="py-3 sm:py-4 text-left text-white font-medium truncate">{item.provider}</td>
               {/* <td className="py-4 text-left text-[#919191]">{item.failureReason}</td> */}
               {/* <td className="py-4 text-right text-white font-medium">{item.retries}</td>  */}
-              <td className="py-4 text-left">
+              <td className="py-3 sm:py-4 text-left">
                 <span className={`inline-flex items-center gap-2 px-2 py-1 rounded-full text-xs font-medium border ${
                   item.status === "completed"
                     ? "bg-[#0f2917] text-[#86efac] border-[#1d3b26]"
@@ -171,7 +171,7 @@ export function TickerList() {
               </td>
               {/* <td className="py-4 text-right text-[#919191] pr-2 rounded-r-xl">{item.updated}</td>
               <td className="py-4 text-left text-white font-medium">{item.lastAction}</td> */}
-              <td className="py-4 text-left text-[#919191]">
+              <td className="py-3 sm:py-4 text-left text-[#919191] truncate">
                 {item.lastActionAt} · {item.lastActionBy}
               </td>
             </tr>
