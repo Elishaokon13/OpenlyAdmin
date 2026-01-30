@@ -26,7 +26,7 @@ Now extend the remaining sidebar pages (Merchants, Ledger, Compliance & Risk, Pr
 - [x] Inventory routes/layout for new pages
 - [x] Create page shells for sidebar items
 - [x] Populate each page with operational content
-- [ ] Add explicit state/warning affordances per page
+- [x] Add explicit state/warning affordances per page
 - [ ] Verify data density and navigation
 
 # Current Status / Progress Tracking
@@ -34,9 +34,10 @@ Inventory complete: only `app/page.tsx` exists; no other routes. Layout is share
 Created page shells using `components/page-shell.tsx` for: `app/system-overview/page.tsx`, `app/merchants/page.tsx`, `app/global-payouts/page.tsx`, `app/ledger/page.tsx`, `app/compliance-risk/page.tsx`, `app/providers/page.tsx`, `app/events-webhooks/page.tsx`.
 Populated each page with operational metrics and dense tables aligned to its domain (payouts, merchants, ledger, compliance, providers, webhooks).
 Sidebar navigation links now route to the new pages (`/system-overview`, `/merchants`, `/global-payouts`, `/ledger`, `/compliance-risk`, `/providers`, `/events-webhooks`).
+Added explicit warning/alert banners on each page to surface SLA breaches, escalations, and disabled endpoints.
 
 # Executor's Feedback or Assistance Requests
-Sidebar routing fixed. Ready to continue Step 4 (add explicit state/warning affordances per page).
+Step 4 complete. Please confirm so I can proceed to Step 5 (verify data density and navigation).
 
 # Lessons
 None yet.
