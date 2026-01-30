@@ -52,7 +52,7 @@ export function Sidebar() {
           href="/providers"
           className={`${linkBaseClass} ${pathname === "/providers" ? linkActive : linkInactive}`}
         >
-          <Server className="h-6 w-6" />
+          <Server className="h-4 w-4" />
           <span className="text-sm font-medium tracking-wide">PROVIDERS</span>
         </Link>
         <Link
