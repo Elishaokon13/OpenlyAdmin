@@ -1,46 +1,37 @@
 # Background and Motivation
 Adapt the existing dark-mode, multi-tab financial dashboard template into an internal admin and operations control panel for Openly. Preserve the visual system and component style while increasing data density and control visibility. This is a multi-page internal app for Operations, Finance, Compliance, and Engineering to monitor money movement, investigate failures, and manage risk.
-Now extend the remaining sidebar pages (Merchants, Ledger, Compliance & Risk, Providers, Events & Webhooks, etc.) beyond the main dashboard.
+Now focus on mobile responsiveness across the dashboard and all admin pages to ensure dense data is still usable on small screens.
 
 # Key Challenges and Analysis
-- Need to find the existing template structure and pages to map new sections and navigation.
-- Must keep visual system consistent while increasing data density and action visibility.
-- Ensure operational UX requirements: explicit states, warnings for destructive actions, and auditability.
-- Multi-page app implies routing/navigation changes; may touch multiple components.
-- Need to add new routes/pages while keeping consistent layout and header/sidebar.
-- Each page needs meaningful operational content (no decorative charts).
+- Dense tables and metrics must collapse or scroll on small screens without losing critical context.
+- Sidebar is hidden on mobile; need alternative navigation access.
+- Ensure alerts, status chips, and action buttons remain visible and tappable.
+- Avoid breaking desktop layout while adding responsive behavior.
 
 # High-level Task Breakdown
-1. Inventory existing routes/pages and layout reuse points.
-   - Success: Identify where to add new pages and how layout is applied.
-2. Create page shells for each sidebar item.
-   - Success: Each route renders with header/sidebar and a page title.
-3. Populate each page with operational sections.
-   - Success: Each page has at least one metrics row and a dense table or panel relevant to the section.
-4. Ensure explicit states and warnings are present where needed.
-   - Success: Status chips, warnings, and audit hints appear on relevant pages.
-5. Sanity check data density and navigation.
-   - Success: No decorative charts; sidebar links map to actual pages.
+1. Audit current responsive behavior on main dashboard and subpages.
+   - Success: Identify components that overflow or become unusable on small screens.
+2. Add mobile navigation access.
+   - Success: Sidebar links are reachable on mobile via a menu or drawer.
+3. Update metrics sections for small screens.
+   - Success: Metrics stack cleanly with readable labels and values.
+4. Make tables mobile-friendly.
+   - Success: Tables allow horizontal scroll or condense columns with key fields visible.
+5. Verify responsive behavior across routes.
+   - Success: All pages usable at ~375px width without clipped content.
 
 # Project Status Board
-- [x] Inventory routes/layout for new pages
-- [x] Create page shells for sidebar items
-- [x] Populate each page with operational content
-- [x] Add explicit state/warning affordances per page
-- [x] Verify data density and navigation
+- [ ] Audit current mobile layout
+- [ ] Add mobile navigation access
+- [ ] Improve metrics responsiveness
+- [ ] Make tables mobile-friendly
+- [ ] Verify responsive behavior across routes
 
 # Current Status / Progress Tracking
-Inventory complete: only `app/page.tsx` exists; no other routes. Layout is shared via `app/layout.tsx`.
-Created page shells using `components/page-shell.tsx` for: `app/system-overview/page.tsx`, `app/merchants/page.tsx`, `app/global-payouts/page.tsx`, `app/ledger/page.tsx`, `app/compliance-risk/page.tsx`, `app/providers/page.tsx`, `app/events-webhooks/page.tsx`.
-Populated each page with operational metrics and dense tables aligned to its domain (payouts, merchants, ledger, compliance, providers, webhooks).
-Sidebar navigation links now route to the new pages (`/system-overview`, `/merchants`, `/global-payouts`, `/ledger`, `/compliance-risk`, `/providers`, `/events-webhooks`).
-Added explicit warning/alert banners on each page to surface SLA breaches, escalations, and disabled endpoints.
-Sidebar now highlights the active route; all sidebar links route to the created pages.
-System Overview now points to `/`, and `/system-overview` redirects to `/` to ensure it displays the main dashboard content.
-Component files in `components/` (non-UI) renamed to camelCase and imports updated.
+Transitioned to mobile responsiveness work.
 
 # Executor's Feedback or Assistance Requests
-Component file naming aligned to camelCase. Please verify.
+Planner mode: ready to start mobile responsiveness updates.
 
 # Lessons
 None yet.
