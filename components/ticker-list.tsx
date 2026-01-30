@@ -1,6 +1,6 @@
 "use client"
 
-import { AlertTriangle, ArrowDownRight, ArrowUpRight, CheckCircle2, ChevronsUpDown, Clock } from 'lucide-react'
+import { AlertTriangle, ArrowUpRight, CheckCircle2, ChevronsUpDown, Clock } from 'lucide-react'
 
 const data = [
   {
