@@ -1,6 +1,6 @@
-import { DashboardMetrics } from "@/components/dashboard-metrics"
-import { PerformanceChart } from "@/components/performance-chart"
-import { TickerList } from "@/components/ticker-list"
+import { DashboardMetrics } from "@/components/dashboardMetrics"
+import { PerformanceChart } from "@/components/performanceChart"
+import { TickerList } from "@/components/tickerList"
 import { Sidebar } from "@/components/sidebar"
 import { Header } from "@/components/header"
 
