@@ -15,8 +15,8 @@ export function DashboardMetrics() {
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 xl:gap-16">
         <div className="flex flex-col gap-1">
-          <span className="text-gray-400 text-sm">Total Locked Funds</span>
-          <span className="text-2xl md:text-xl lg:text-2xl font-semibold text-white">$1,942,550,120</span>
+          {/* <span className="text-gray-400 text-sm">Total Locked Funds</span>
+          <span className="text-2xl md:text-xl lg:text-2xl font-semibold text-white">$1,942,550,120</span> */}
         </div>
         <div className="flex flex-col gap-1">
           <span className="text-gray-400 text-sm">Provider Balances</span>
