@@ -82,7 +82,7 @@ const data = [
 
 export function TickerList() {
   return (
-    <div className="bg-[#0D0D0D] rounded-2xl p-6 flex flex-col gap-4">
+    <div className="bg-[#0D0D0D] rounded-2xl p-4 sm:p-6 flex flex-col gap-4">
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
         <div className="flex flex-col gap-1">
           <h3 className="text-white text-base font-medium">Admin Actions</h3>
@@ -105,7 +105,8 @@ export function TickerList() {
           </button>
         </div> */}
       </div>
-      <table className="w-full">
+      <div className="-mx-4 sm:mx-0 overflow-x-auto">
+        <table className="w-full min-w-[720px] sm:min-w-0">
         <thead>
           <tr className="text-[#919191] text-sm border-b border-transparent">
             <th className="pb-4 text-left font-medium pl-2">
@@ -176,7 +177,8 @@ export function TickerList() {
             </tr>
           ))}
         </tbody>
-      </table>
+        </table>
+      </div>
     </div>
   )
 }
