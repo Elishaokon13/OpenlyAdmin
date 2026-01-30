@@ -23,7 +23,7 @@ Adapt the existing dark-mode, multi-tab financial dashboard template into an int
 
 # Project Status Board
 - [x] Locate template layout/pages and nav
-- [ ] Update sidebar navigation labels
+- [x] Update sidebar navigation labels
 - [ ] Update top metrics bar KPIs
 - [ ] Repurpose chart and table sections
 - [ ] Add admin-only actions with warnings/audit info
@@ -32,9 +32,10 @@ Adapt the existing dark-mode, multi-tab financial dashboard template into an int
 # Current Status / Progress Tracking
 Located primary dashboard and component files: `app/page.tsx`, `components/sidebar.tsx`, `components/dashboard-metrics.tsx`, `components/performance-chart.tsx`, `components/ticker-list.tsx`, and `components/header.tsx`.
 Repo hygiene: removed `auto-commit.sh` and `run.sh` from git tracking (files preserved locally).
+Sidebar updated with admin navigation: System Overview, Merchants, Global Payouts, Ledger, Compliance & Risk, Providers, Events & Webhooks.
 
 # Executor's Feedback or Assistance Requests
-Step 1 complete. Please confirm so I can proceed to Step 2 (update sidebar navigation labels).
+Step 2 complete. Please confirm so I can proceed to Step 3 (remap top metrics bar KPIs).
 
 # Lessons
 None yet.
