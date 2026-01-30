@@ -24,16 +24,17 @@ Now extend the remaining sidebar pages (Merchants, Ledger, Compliance & Risk, Pr
 
 # Project Status Board
 - [x] Inventory routes/layout for new pages
-- [ ] Create page shells for sidebar items
+- [x] Create page shells for sidebar items
 - [ ] Populate each page with operational content
 - [ ] Add explicit state/warning affordances per page
 - [ ] Verify data density and navigation
 
 # Current Status / Progress Tracking
 Inventory complete: only `app/page.tsx` exists; no other routes. Layout is shared via `app/layout.tsx`.
+Created page shells using `components/page-shell.tsx` for: `app/system-overview/page.tsx`, `app/merchants/page.tsx`, `app/global-payouts/page.tsx`, `app/ledger/page.tsx`, `app/compliance-risk/page.tsx`, `app/providers/page.tsx`, `app/events-webhooks/page.tsx`.
 
 # Executor's Feedback or Assistance Requests
-Step 1 complete. Please confirm so I can proceed to Step 2 (create page shells for sidebar items).
+Step 2 complete. Please confirm so I can proceed to Step 3 (populate each page with operational content).
 
 # Lessons
 None yet.
