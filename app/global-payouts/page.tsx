@@ -30,6 +30,10 @@ export default function GlobalPayoutsPage() {
         ))}
       </div>
 
+      <div className="rounded-2xl border border-[#3b1d1d] bg-[#1a0f10] p-4 text-sm text-[#fca5a5]">
+        Alert: 312 payouts auto-cancelled in last hour due to provider balance shortfall.
+      </div>
+
       <div className="rounded-2xl border border-[#1F1F1F] bg-[#0D0D0D] p-6">
         <div className="flex items-center justify-between">
           <h3 className="text-sm font-semibold text-white">Global Payout Queue</h3>
