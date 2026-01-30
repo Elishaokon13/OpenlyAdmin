@@ -34,51 +34,53 @@ export default function GlobalPayoutsPage() {
         Alert: 312 payouts auto-cancelled in last hour due to provider balance shortfall.
       </div>
 
-      <div className="rounded-2xl border border-[#1F1F1F] bg-[#0D0D0D] p-6">
+      <div className="rounded-2xl border border-[#1F1F1F] bg-[#0D0D0D] p-4 sm:p-6">
         <div className="flex items-center justify-between">
           <h3 className="text-sm font-semibold text-white">Global Payout Queue</h3>
           <span className="text-xs text-[#919191]">Sorted by risk</span>
         </div>
-        <table className="mt-4 w-full text-sm">
-          <thead>
-            <tr className="text-[#919191] text-xs">
-              <th className="pb-3 text-left font-medium">Payout ID</th>
-              <th className="pb-3 text-left font-medium">Merchant</th>
-              <th className="pb-3 text-right font-medium">Amount</th>
-              <th className="pb-3 text-left font-medium">Provider</th>
-              <th className="pb-3 text-left font-medium">State</th>
-              <th className="pb-3 text-left font-medium">Failure Reason</th>
-              <th className="pb-3 text-right font-medium">Retries</th>
-              <th className="pb-3 text-right font-medium">Updated</th>
-            </tr>
-          </thead>
-          <tbody>
-            {payouts.map((payout) => (
-              <tr key={payout.id} className="border-t border-[#1F1F1F]">
-                <td className="py-3 text-white font-medium">{payout.id}</td>
-                <td className="py-3 text-white">{payout.merchant}</td>
-                <td className="py-3 text-right text-white">{payout.amount}</td>
-                <td className="py-3 text-white">{payout.provider}</td>
-                <td className="py-3">
-                  <span className={`inline-flex items-center rounded-full px-2 py-1 text-xs font-semibold ${
-                    payout.state === "completed"
-                      ? "bg-[#0f2917] text-[#86efac]"
-                      : payout.state === "failed"
-                        ? "bg-[#2a1212] text-[#f87171]"
-                        : payout.state === "retrying"
-                          ? "bg-[#1b2332] text-[#60a5fa]"
-                          : "bg-[#2a1f0f] text-[#fbbf24]"
-                  }`}>
-                    {payout.state}
-                  </span>
-                </td>
-                <td className="py-3 text-[#919191]">{payout.reason}</td>
-                <td className="py-3 text-right text-white">{payout.retries}</td>
-                <td className="py-3 text-right text-[#919191]">{payout.updated}</td>
+        <div className="-mx-4 sm:mx-0 mt-4 overflow-x-auto">
+          <table className="w-full min-w-[820px] text-sm">
+            <thead>
+              <tr className="text-[#919191] text-xs">
+                <th className="pb-3 text-left font-medium">Payout ID</th>
+                <th className="pb-3 text-left font-medium">Merchant</th>
+                <th className="pb-3 text-right font-medium">Amount</th>
+                <th className="pb-3 text-left font-medium">Provider</th>
+                <th className="pb-3 text-left font-medium">State</th>
+                <th className="pb-3 text-left font-medium">Failure Reason</th>
+                <th className="pb-3 text-right font-medium">Retries</th>
+                <th className="pb-3 text-right font-medium">Updated</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {payouts.map((payout) => (
+                <tr key={payout.id} className="border-t border-[#1F1F1F]">
+                  <td className="py-3 text-white font-medium">{payout.id}</td>
+                  <td className="py-3 text-white">{payout.merchant}</td>
+                  <td className="py-3 text-right text-white">{payout.amount}</td>
+                  <td className="py-3 text-white">{payout.provider}</td>
+                  <td className="py-3">
+                    <span className={`inline-flex items-center rounded-full px-2 py-1 text-xs font-semibold ${
+                      payout.state === "completed"
+                        ? "bg-[#0f2917] text-[#86efac]"
+                        : payout.state === "failed"
+                          ? "bg-[#2a1212] text-[#f87171]"
+                          : payout.state === "retrying"
+                            ? "bg-[#1b2332] text-[#60a5fa]"
+                            : "bg-[#2a1f0f] text-[#fbbf24]"
+                    }`}>
+                      {payout.state}
+                    </span>
+                  </td>
+                  <td className="py-3 text-[#919191]">{payout.reason}</td>
+                  <td className="py-3 text-right text-white">{payout.retries}</td>
+                  <td className="py-3 text-right text-[#919191]">{payout.updated}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </PageShell>
   )
