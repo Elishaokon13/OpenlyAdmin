@@ -36,9 +36,10 @@ Populated each page with operational metrics and dense tables aligned to its dom
 Sidebar navigation links now route to the new pages (`/system-overview`, `/merchants`, `/global-payouts`, `/ledger`, `/compliance-risk`, `/providers`, `/events-webhooks`).
 Added explicit warning/alert banners on each page to surface SLA breaches, escalations, and disabled endpoints.
 Sidebar now highlights the active route; all sidebar links route to the created pages.
+System Overview now points to `/`, and `/system-overview` redirects to `/` to ensure it displays the main dashboard content.
 
 # Executor's Feedback or Assistance Requests
-Step 5 complete. Please confirm the new pages and navigation work as expected.
+System Overview routing aligned to `/`. Please verify.
 
 # Lessons
 None yet.
