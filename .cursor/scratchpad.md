@@ -25,7 +25,7 @@ Adapt the existing dark-mode, multi-tab financial dashboard template into an int
 - [x] Locate template layout/pages and nav
 - [x] Update sidebar navigation labels
 - [x] Update top metrics bar KPIs
-- [ ] Repurpose chart and table sections
+- [x] Repurpose chart and table sections
 - [ ] Add admin-only actions with warnings/audit info
 - [ ] Review for data density and explicit states
 
@@ -34,9 +34,10 @@ Located primary dashboard and component files: `app/page.tsx`, `components/sideb
 Repo hygiene: removed `auto-commit.sh` and `run.sh` from git tracking (files preserved locally).
 Sidebar updated with admin navigation: System Overview, Merchants, Global Payouts, Ledger, Compliance & Risk, Providers, Events & Webhooks.
 Top metrics bar updated to: Total Funds Under Management, Total Locked Funds, Provider Balances, Payout Queue Depth, Failed Payouts (24h).
+Main chart retitled to system-wide payout volume with successful vs failed payouts and provider health trends. Main table repurposed to global payouts with failure reasons, retry counts, provider, status, and lifecycle links.
 
 # Executor's Feedback or Assistance Requests
-Step 3 complete. Please confirm so I can proceed to Step 4 (repurpose chart and table sections).
+Step 4 complete. Please confirm so I can proceed to Step 5 (add admin-only actions with warnings/audit info).
 
 # Lessons
 None yet.
