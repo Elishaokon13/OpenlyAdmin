@@ -30,6 +30,10 @@ export default function ProvidersPage() {
         ))}
       </div>
 
+      <div className="rounded-2xl border border-[#3b2d1a] bg-[#20170a] p-4 text-sm text-[#fbbf24]">
+        Warning: 2 providers breached SLA in the last 24h. Manual failover recommended.
+      </div>
+
       <div className="rounded-2xl border border-[#1F1F1F] bg-[#0D0D0D] p-6">
         <div className="flex items-center justify-between">
           <h3 className="text-sm font-semibold text-white">Provider Health</h3>
