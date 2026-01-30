@@ -8,6 +8,7 @@ export function DashboardMetrics() {
     { label: "Revenue", value: "$10M" },
     { label: "Expenses", value: "$8M" },
     { label: "Net Profit", value: "$2M" }
+    
   ]
 
   return (
