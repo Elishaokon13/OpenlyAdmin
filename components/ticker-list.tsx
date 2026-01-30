@@ -13,6 +13,9 @@ const data = [
     retries: 0,
     status: "completed",
     updated: "2m ago",
+    lastAction: "Released",
+    lastActionAt: "10:42:12Z",
+    lastActionBy: "ops@openly",
     href: "/payouts/po_8f2c91"
   },
   {
@@ -25,6 +28,9 @@ const data = [
     retries: 2,
     status: "failed",
     updated: "11m ago",
+    lastAction: "Retry scheduled",
+    lastActionAt: "10:33:58Z",
+    lastActionBy: "finance@openly",
     href: "/payouts/po_52c118"
   },
   {
@@ -37,6 +43,9 @@ const data = [
     retries: 1,
     status: "retrying",
     updated: "25m ago",
+    lastAction: "Held for review",
+    lastActionAt: "10:19:06Z",
+    lastActionBy: "compliance@openly",
     href: "/payouts/po_3ac4f0"
   },
   {
@@ -49,6 +58,9 @@ const data = [
     retries: 0,
     status: "pending",
     updated: "42m ago",
+    lastAction: "Queued",
+    lastActionAt: "10:05:44Z",
+    lastActionBy: "system",
     href: "/payouts/po_01ff9a"
   },
   {
@@ -61,13 +73,38 @@ const data = [
     retries: 3,
     status: "failed",
     updated: "1h ago",
+    lastAction: "Override denied",
+    lastActionAt: "09:22:01Z",
+    lastActionBy: "eng@openly",
     href: "/payouts/po_aa12b8"
   }
 ]
 
 export function TickerList() {
   return (
-    <div className="bg-[#0D0D0D] rounded-2xl p-6">
+    <div className="bg-[#0D0D0D] rounded-2xl p-6 flex flex-col gap-4">
+      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+        <div className="flex flex-col gap-1">
+          <h3 className="text-white text-base font-medium">Admin Actions</h3>
+          <p className="text-sm text-[#919191]">
+            Destructive actions require confirmation. All actions are logged with timestamp and actor.
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          <button className="px-3 py-2 rounded-lg text-sm font-medium border border-[#3b1d1d] text-[#f87171] bg-[#2a1212] hover:bg-[#3b1d1d] transition-colors">
+            Freeze User
+          </button>
+          <button className="px-3 py-2 rounded-lg text-sm font-medium border border-[#2b3342] text-[#60a5fa] bg-[#1b2332] hover:bg-[#2b3342] transition-colors">
+            Retry Payout
+          </button>
+          <button className="px-3 py-2 rounded-lg text-sm font-medium border border-[#3b2d1a] text-[#fbbf24] bg-[#2a1f0f] hover:bg-[#3b2d1a] transition-colors">
+            Cancel Payout
+          </button>
+          <button className="px-3 py-2 rounded-lg text-sm font-medium border border-[#3b1d1d] text-[#f87171] bg-[#2a1212] hover:bg-[#3b1d1d] transition-colors">
+            Override State
+          </button>
+        </div>
+      </div>
       <table className="w-full">
         <thead>
           <tr className="text-[#919191] text-sm border-b border-transparent">
@@ -84,6 +121,8 @@ export function TickerList() {
             <th className="pb-4 text-right font-medium">Retries</th>
             <th className="pb-4 text-left font-medium">Status</th>
             <th className="pb-4 text-right font-medium pr-2">Last Update</th>
+            <th className="pb-4 text-left font-medium">Last Action</th>
+            <th className="pb-4 text-left font-medium">Action Log</th>
           </tr>
         </thead>
         <tbody>
@@ -130,6 +169,10 @@ export function TickerList() {
                 </span>
               </td>
               <td className="py-4 text-right text-[#919191] pr-2 rounded-r-xl">{item.updated}</td>
+              <td className="py-4 text-left text-white font-medium">{item.lastAction}</td>
+              <td className="py-4 text-left text-[#919191]">
+                {item.lastActionAt} · {item.lastActionBy}
+              </td>
             </tr>
           ))}
         </tbody>
