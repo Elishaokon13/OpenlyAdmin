@@ -24,16 +24,17 @@ Now focus on mobile responsiveness across the dashboard and all admin pages to e
 - [x] Audit current mobile layout
 - [x] Add mobile navigation access
 - [x] Improve metrics responsiveness
-- [ ] Make tables mobile-friendly
+- [x] Make tables mobile-friendly
 - [ ] Verify responsive behavior across routes
 
 # Current Status / Progress Tracking
 Initial audit: sidebar hidden on mobile with no alternative navigation; tables are full-width without horizontal scroll; chart has fixed 400px height; metrics are large but generally stack.
 Added a mobile drawer menu using `Sheet` with `MobileNav` links in the header.
 Adjusted dashboard metrics sizing and chart header controls for smaller screens; chart height now scales down on mobile.
+Tables now sit in horizontal scroll containers with mobile-friendly padding across all routes and the main payouts list.
 
 # Executor's Feedback or Assistance Requests
-Step 3 complete. Please confirm so I can proceed to Step 4 (make tables mobile-friendly).
+Step 4 complete. Please confirm so I can proceed to Step 5 (verify responsive behavior across routes).
 
 # Lessons
 None yet.
