@@ -33,9 +33,10 @@ Now extend the remaining sidebar pages (Merchants, Ledger, Compliance & Risk, Pr
 Inventory complete: only `app/page.tsx` exists; no other routes. Layout is shared via `app/layout.tsx`.
 Created page shells using `components/page-shell.tsx` for: `app/system-overview/page.tsx`, `app/merchants/page.tsx`, `app/global-payouts/page.tsx`, `app/ledger/page.tsx`, `app/compliance-risk/page.tsx`, `app/providers/page.tsx`, `app/events-webhooks/page.tsx`.
 Populated each page with operational metrics and dense tables aligned to its domain (payouts, merchants, ledger, compliance, providers, webhooks).
+Sidebar navigation links now route to the new pages (`/system-overview`, `/merchants`, `/global-payouts`, `/ledger`, `/compliance-risk`, `/providers`, `/events-webhooks`).
 
 # Executor's Feedback or Assistance Requests
-Step 3 complete. Please confirm so I can proceed to Step 4 (add explicit state/warning affordances per page).
+Sidebar routing fixed. Ready to continue Step 4 (add explicit state/warning affordances per page).
 
 # Lessons
 None yet.
