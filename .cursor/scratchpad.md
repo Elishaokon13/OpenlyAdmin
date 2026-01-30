@@ -31,6 +31,7 @@ Adapt the existing dark-mode, multi-tab financial dashboard template into an int
 
 # Current Status / Progress Tracking
 Planner initialized. Awaiting Executor to start Step 1.
+Repo hygiene: removed `auto-commit.sh` and `run.sh` from git tracking (files preserved locally).
 
 # Executor's Feedback or Assistance Requests
 None yet.
