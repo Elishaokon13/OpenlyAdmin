@@ -30,6 +30,10 @@ export default function MerchantsPage() {
         ))}
       </div>
 
+      <div className="rounded-2xl border border-[#3b2d1a] bg-[#20170a] p-4 text-sm text-[#fbbf24]">
+        Warning: 18 merchants exceed payout failure thresholds. Reviews required before release.
+      </div>
+
       <div className="rounded-2xl border border-[#1F1F1F] bg-[#0D0D0D] p-6">
         <div className="flex items-center justify-between">
           <h3 className="text-sm font-semibold text-white">Merchant Risk Queue</h3>
