@@ -27,7 +27,7 @@ Adapt the existing dark-mode, multi-tab financial dashboard template into an int
 - [x] Update top metrics bar KPIs
 - [x] Repurpose chart and table sections
 - [x] Add admin-only actions with warnings/audit info
-- [ ] Review for data density and explicit states
+- [x] Review for data density and explicit states
 
 # Current Status / Progress Tracking
 Located primary dashboard and component files: `app/page.tsx`, `components/sidebar.tsx`, `components/dashboard-metrics.tsx`, `components/performance-chart.tsx`, `components/ticker-list.tsx`, and `components/header.tsx`.
@@ -36,9 +36,10 @@ Sidebar updated with admin navigation: System Overview, Merchants, Global Payout
 Top metrics bar updated to: Total Funds Under Management, Total Locked Funds, Provider Balances, Payout Queue Depth, Failed Payouts (24h).
 Main chart retitled to system-wide payout volume with successful vs failed payouts and provider health trends. Main table repurposed to global payouts with failure reasons, retry counts, provider, status, and lifecycle links.
 Admin actions added with destructive warnings and audit log fields (last action, timestamp, actor).
+Review notes: status chips remain explicit; user commented out failure reason, retries, and action buttons for now.
 
 # Executor's Feedback or Assistance Requests
-Step 5 complete. Please confirm so I can proceed to Step 6 (review for data density and explicit states).
+Step 6 complete. Do you want the commented-out failure reason/retry columns and admin action buttons restored for higher data density?
 
 # Lessons
 None yet.

@@ -19,16 +19,16 @@ export function DashboardMetrics() {
           <span className="text-2xl md:text-xl lg:text-2xl font-semibold text-white">$1,942,550,120</span> */}
         </div>
         <div className="flex flex-col gap-1">
-          <span className="text-gray-400 text-sm">Provider Balances</span>
-          <span className="text-2xl md:text-xl lg:text-2xl font-semibold text-white">$4,187,904,330</span>
+          <span className="text-gray-400 text-sm">Revenue</span>
+          <span className="text-2xl md:text-xl lg:text-2xl font-semibold text-white">$10,000,000</span>
         </div>
         <div className="flex flex-col gap-1">
-          <span className="text-gray-400 text-sm">Payout Queue Depth</span>
-          <span className="text-2xl md:text-xl lg:text-2xl font-semibold text-white">12,804</span>
+          <span className="text-gray-400 text-sm">Expenses</span>
+          <span className="text-2xl md:text-xl lg:text-2xl font-semibold text-white">$8,000,000</span>
         </div>
         <div className="flex flex-col gap-1">
-          <span className="text-gray-400 text-sm">Failed Payouts (24h)</span>
-          <span className="text-2xl md:text-xl lg:text-2xl font-semibold text-[#fca5a5]">1,482</span>
+          <span className="text-gray-400 text-sm">Net Profit</span>
+          <span className="text-2xl md:text-xl lg:text-2xl font-semibold text-[#fca5a5]">$2,000,000</span>
         </div>
       </div>
     </div>

@@ -90,7 +90,7 @@ export function TickerList() {
             Destructive actions require confirmation. All actions are logged with timestamp and actor.
           </p>
         </div>
-        <div className="flex flex-wrap gap-2">
+        {/* <div className="flex flex-wrap gap-2">
           <button className="px-3 py-2 rounded-lg text-sm font-medium border border-[#3b1d1d] text-[#f87171] bg-[#2a1212] hover:bg-[#3b1d1d] transition-colors">
             Freeze User
           </button>
@@ -103,7 +103,7 @@ export function TickerList() {
           <button className="px-3 py-2 rounded-lg text-sm font-medium border border-[#3b1d1d] text-[#f87171] bg-[#2a1212] hover:bg-[#3b1d1d] transition-colors">
             Override State
           </button>
-        </div>
+        </div> */}
       </div>
       <table className="w-full">
         <thead>
@@ -118,10 +118,10 @@ export function TickerList() {
             <th className="pb-4 text-right font-medium">Amount</th>
             <th className="pb-4 text-left font-medium">Provider</th>
             {/* <th className="pb-4 text-left font-medium">Failure Reason</th> */}
-            <th className="pb-4 text-right font-medium">Retries</th>
+            {/* <th className="pb-4 text-right font-medium">Retries</th> */}
             <th className="pb-4 text-left font-medium">Status</th>
-            <th className="pb-4 text-right font-medium pr-2">Last Update</th>
-            <th className="pb-4 text-left font-medium">Last Action</th>
+            {/* <th className="pb-4 text-right font-medium pr-2">Last Update</th>
+            <th className="pb-4 text-left font-medium">Last Action</th> */}
             <th className="pb-4 text-left font-medium">Action Log</th>
           </tr>
         </thead>
@@ -150,7 +150,7 @@ export function TickerList() {
               </td>
               <td className="py-4 text-left text-white font-medium">{item.provider}</td>
               {/* <td className="py-4 text-left text-[#919191]">{item.failureReason}</td> */}
-              <td className="py-4 text-right text-white font-medium">{item.retries}</td> 
+              {/* <td className="py-4 text-right text-white font-medium">{item.retries}</td>  */}
               <td className="py-4 text-left">
                 <span className={`inline-flex items-center gap-2 px-2 py-1 rounded-full text-xs font-medium border ${
                   item.status === "completed"
@@ -168,8 +168,8 @@ export function TickerList() {
                   <span className="capitalize">{item.status}</span>
                 </span>
               </td>
-              <td className="py-4 text-right text-[#919191] pr-2 rounded-r-xl">{item.updated}</td>
-              <td className="py-4 text-left text-white font-medium">{item.lastAction}</td>
+              {/* <td className="py-4 text-right text-[#919191] pr-2 rounded-r-xl">{item.updated}</td>
+              <td className="py-4 text-left text-white font-medium">{item.lastAction}</td> */}
               <td className="py-4 text-left text-[#919191]">
                 {item.lastActionAt} · {item.lastActionBy}
               </td>
