@@ -105,79 +105,133 @@ export function TickerList() {
           </button>
         </div> */}
       </div>
-      <div className="-mx-4 sm:mx-0 overflow-x-auto">
+      <div className="-mx-4 sm:mx-0 overflow-x-auto hidden md:block">
         <table className="w-full min-w-[720px] sm:min-w-0">
-        <thead>
-          <tr className="text-[#919191] text-sm border-b border-transparent">
-            <th className="pb-4 text-left font-medium pl-2">
-              <div className="flex items-center gap-1 cursor-pointer hover:text-white transition-colors">
-                Payout ID
-                <ChevronsUpDown className="h-4 w-4" />
-              </div>
-            </th>
-            <th className="pb-4 text-left font-medium">Merchant</th>
-            <th className="pb-4 text-right font-medium">Amount</th>
-            <th className="pb-4 text-left font-medium">Provider</th>
-            {/* <th className="pb-4 text-left font-medium">Failure Reason</th> */}
-            {/* <th className="pb-4 text-right font-medium">Retries</th> */}
-            <th className="pb-4 text-left font-medium">Status</th>
-            {/* <th className="pb-4 text-right font-medium pr-2">Last Update</th>
-            <th className="pb-4 text-left font-medium">Last Action</th> */}
-            <th className="pb-4 text-left font-medium">Action Log</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.map((item) => (
-            <tr 
-              key={item.id} 
-              onClick={() => (window.location.href = item.href)}
-              onKeyDown={(event) => {
-                if (event.key === "Enter") {
-                  window.location.href = item.href
-                }
-              }}
-              role="link"
-              tabIndex={0}
-              className="group transition-colors border-b border-transparent last:border-0 hover:bg-[#1A1A1A] cursor-pointer"
-            >
-              <td className="py-4 pl-2 rounded-l-xl">
-                <div className="flex items-center gap-3">
-                  <span className="font-semibold text-white">{item.id}</span>
+          <thead>
+            <tr className="text-[#919191] text-sm border-b border-transparent">
+              <th className="pb-4 text-left font-medium pl-2">
+                <div className="flex items-center gap-1 cursor-pointer hover:text-white transition-colors">
+                  Payout ID
+                  <ChevronsUpDown className="h-4 w-4" />
                 </div>
-              </td>
-              <td className="py-4 text-left text-white font-medium">{item.merchant}</td>
-              <td className="py-4 text-right text-white font-medium">
-                {item.amount.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} {item.currency}
-              </td>
-              <td className="py-4 text-left text-white font-medium">{item.provider}</td>
-              {/* <td className="py-4 text-left text-[#919191]">{item.failureReason}</td> */}
-              {/* <td className="py-4 text-right text-white font-medium">{item.retries}</td>  */}
-              <td className="py-4 text-left">
-                <span className={`inline-flex items-center gap-2 px-2 py-1 rounded-full text-xs font-medium border ${
-                  item.status === "completed"
-                    ? "bg-[#0f2917] text-[#86efac] border-[#1d3b26]"
-                    : item.status === "failed"
-                      ? "bg-[#2a1212] text-[#f87171] border-[#3b1d1d]"
-                      : item.status === "retrying"
-                        ? "bg-[#1b2332] text-[#60a5fa] border-[#2b3342]"
-                        : "bg-[#2a1f0f] text-[#fbbf24] border-[#3b2d1a]"
-                }`}>
-                  {item.status === "completed" && <CheckCircle2 className="h-3 w-3" />}
-                  {item.status === "failed" && <AlertTriangle className="h-3 w-3" />}
-                  {item.status === "retrying" && <ArrowUpRight className="h-3 w-3" />}
-                  {item.status === "pending" && <Clock className="h-3 w-3" />}
-                  <span className="capitalize">{item.status}</span>
-                </span>
-              </td>
-              {/* <td className="py-4 text-right text-[#919191] pr-2 rounded-r-xl">{item.updated}</td>
-              <td className="py-4 text-left text-white font-medium">{item.lastAction}</td> */}
-              <td className="py-4 text-left text-[#919191]">
-                {item.lastActionAt} · {item.lastActionBy}
-              </td>
+              </th>
+              <th className="pb-4 text-left font-medium">Merchant</th>
+              <th className="pb-4 text-right font-medium">Amount</th>
+              <th className="pb-4 text-left font-medium">Provider</th>
+              {/* <th className="pb-4 text-left font-medium">Failure Reason</th> */}
+              {/* <th className="pb-4 text-right font-medium">Retries</th> */}
+              <th className="pb-4 text-left font-medium">Status</th>
+              {/* <th className="pb-4 text-right font-medium pr-2">Last Update</th>
+              <th className="pb-4 text-left font-medium">Last Action</th> */}
+              <th className="pb-4 text-left font-medium">Action Log</th>
             </tr>
-          ))}
-        </tbody>
+          </thead>
+          <tbody>
+            {data.map((item) => (
+              <tr
+                key={item.id}
+                onClick={() => (window.location.href = item.href)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter") {
+                    window.location.href = item.href
+                  }
+                }}
+                role="link"
+                tabIndex={0}
+                className="group transition-colors border-b border-transparent last:border-0 hover:bg-[#1A1A1A] cursor-pointer"
+              >
+                <td className="py-4 pl-2 rounded-l-xl">
+                  <div className="flex items-center gap-3">
+                    <span className="font-semibold text-white">{item.id}</span>
+                  </div>
+                </td>
+                <td className="py-4 text-left text-white font-medium">{item.merchant}</td>
+                <td className="py-4 text-right text-white font-medium">
+                  {item.amount.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} {item.currency}
+                </td>
+                <td className="py-4 text-left text-white font-medium">{item.provider}</td>
+                {/* <td className="py-4 text-left text-[#919191]">{item.failureReason}</td> */}
+                {/* <td className="py-4 text-right text-white font-medium">{item.retries}</td>  */}
+                <td className="py-4 text-left">
+                  <span className={`inline-flex items-center gap-2 px-2 py-1 rounded-full text-xs font-medium border ${
+                    item.status === "completed"
+                      ? "bg-[#0f2917] text-[#86efac] border-[#1d3b26]"
+                      : item.status === "failed"
+                        ? "bg-[#2a1212] text-[#f87171] border-[#3b1d1d]"
+                        : item.status === "retrying"
+                          ? "bg-[#1b2332] text-[#60a5fa] border-[#2b3342]"
+                          : "bg-[#2a1f0f] text-[#fbbf24] border-[#3b2d1a]"
+                  }`}>
+                    {item.status === "completed" && <CheckCircle2 className="h-3 w-3" />}
+                    {item.status === "failed" && <AlertTriangle className="h-3 w-3" />}
+                    {item.status === "retrying" && <ArrowUpRight className="h-3 w-3" />}
+                    {item.status === "pending" && <Clock className="h-3 w-3" />}
+                    <span className="capitalize">{item.status}</span>
+                  </span>
+                </td>
+                {/* <td className="py-4 text-right text-[#919191] pr-2 rounded-r-xl">{item.updated}</td>
+                <td className="py-4 text-left text-white font-medium">{item.lastAction}</td> */}
+                <td className="py-4 text-left text-[#919191]">
+                  {item.lastActionAt} · {item.lastActionBy}
+                </td>
+              </tr>
+            ))}
+          </tbody>
         </table>
+      </div>
+
+      <div className="flex flex-col gap-3 md:hidden">
+        {data.map((item) => (
+          <div
+            key={item.id}
+            onClick={() => (window.location.href = item.href)}
+            onKeyDown={(event) => {
+              if (event.key === "Enter") {
+                window.location.href = item.href
+              }
+            }}
+            role="link"
+            tabIndex={0}
+            className="rounded-xl border border-[#1F1F1F] bg-[#111] p-4 transition-colors hover:bg-[#1A1A1A] cursor-pointer"
+          >
+            <div className="flex items-start justify-between gap-3">
+              <div>
+                <div className="text-sm font-semibold text-white">{item.id}</div>
+                <div className="text-xs text-[#919191]">{item.merchant}</div>
+              </div>
+              <div className="text-right">
+                <div className="text-sm font-semibold text-white">
+                  {item.amount.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} {item.currency}
+                </div>
+                <div className="text-xs text-[#919191]">{item.provider}</div>
+              </div>
+            </div>
+
+            <div className="mt-3 flex items-center justify-between gap-2">
+              <span className={`inline-flex items-center gap-2 px-2 py-1 rounded-full text-xs font-medium border ${
+                item.status === "completed"
+                  ? "bg-[#0f2917] text-[#86efac] border-[#1d3b26]"
+                  : item.status === "failed"
+                    ? "bg-[#2a1212] text-[#f87171] border-[#3b1d1d]"
+                    : item.status === "retrying"
+                      ? "bg-[#1b2332] text-[#60a5fa] border-[#2b3342]"
+                      : "bg-[#2a1f0f] text-[#fbbf24] border-[#3b2d1a]"
+              }`}>
+                {item.status === "completed" && <CheckCircle2 className="h-3 w-3" />}
+                {item.status === "failed" && <AlertTriangle className="h-3 w-3" />}
+                {item.status === "retrying" && <ArrowUpRight className="h-3 w-3" />}
+                {item.status === "pending" && <Clock className="h-3 w-3" />}
+                <span className="capitalize">{item.status}</span>
+              </span>
+              <span className="text-xs text-[#919191]">{item.updated}</span>
+            </div>
+
+            <div className="mt-3 flex items-center justify-between text-xs text-[#919191]">
+              <span>{item.lastActionAt}</span>
+              <span>{item.lastActionBy}</span>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   )
