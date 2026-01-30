@@ -23,17 +23,17 @@ Now extend the remaining sidebar pages (Merchants, Ledger, Compliance & Risk, Pr
    - Success: No decorative charts; sidebar links map to actual pages.
 
 # Project Status Board
-- [ ] Inventory routes/layout for new pages
+- [x] Inventory routes/layout for new pages
 - [ ] Create page shells for sidebar items
 - [ ] Populate each page with operational content
 - [ ] Add explicit state/warning affordances per page
 - [ ] Verify data density and navigation
 
 # Current Status / Progress Tracking
-Completed main dashboard remap and admin controls. Ready to extend remaining pages.
+Inventory complete: only `app/page.tsx` exists; no other routes. Layout is shared via `app/layout.tsx`.
 
 # Executor's Feedback or Assistance Requests
-Planner mode: awaiting executor to start new page extensions.
+Step 1 complete. Please confirm so I can proceed to Step 2 (create page shells for sidebar items).
 
 # Lessons
 None yet.
