@@ -34,47 +34,49 @@ export default function LedgerPage() {
         Warning: 184 unreconciled ledger entries awaiting review. Settlement holds active.
       </div>
 
-      <div className="rounded-2xl border border-[#1F1F1F] bg-[#0D0D0D] p-6">
+      <div className="rounded-2xl border border-[#1F1F1F] bg-[#0D0D0D] p-4 sm:p-6">
         <div className="flex items-center justify-between">
           <h3 className="text-sm font-semibold text-white">Recent Ledger Entries</h3>
           <span className="text-xs text-[#919191]">Immutable log</span>
         </div>
-        <table className="mt-4 w-full text-sm">
-          <thead>
-            <tr className="text-[#919191] text-xs">
-              <th className="pb-3 text-left font-medium">Entry</th>
-              <th className="pb-3 text-left font-medium">Type</th>
-              <th className="pb-3 text-right font-medium">Amount</th>
-              <th className="pb-3 text-left font-medium">Account</th>
-              <th className="pb-3 text-left font-medium">Status</th>
-              <th className="pb-3 text-left font-medium">Source</th>
-              <th className="pb-3 text-right font-medium">Time</th>
-            </tr>
-          </thead>
-          <tbody>
-            {entries.map((entry) => (
-              <tr key={entry.id} className="border-t border-[#1F1F1F]">
-                <td className="py-3 text-white font-medium">{entry.id}</td>
-                <td className="py-3 text-[#919191] capitalize">{entry.type}</td>
-                <td className="py-3 text-right text-white">{entry.amount}</td>
-                <td className="py-3 text-white">{entry.account}</td>
-                <td className="py-3">
-                  <span className={`inline-flex items-center rounded-full px-2 py-1 text-xs font-semibold ${
-                    entry.status === "posted"
-                      ? "bg-[#0f2917] text-[#86efac]"
-                      : entry.status === "pending"
-                        ? "bg-[#2a1f0f] text-[#fbbf24]"
-                        : "bg-[#2a1212] text-[#f87171]"
-                  }`}>
-                    {entry.status}
-                  </span>
-                </td>
-                <td className="py-3 text-white">{entry.source}</td>
-                <td className="py-3 text-right text-[#919191]">{entry.time}</td>
+        <div className="-mx-4 sm:mx-0 mt-4 overflow-x-auto">
+          <table className="w-full min-w-[760px] text-sm">
+            <thead>
+              <tr className="text-[#919191] text-xs">
+                <th className="pb-3 text-left font-medium">Entry</th>
+                <th className="pb-3 text-left font-medium">Type</th>
+                <th className="pb-3 text-right font-medium">Amount</th>
+                <th className="pb-3 text-left font-medium">Account</th>
+                <th className="pb-3 text-left font-medium">Status</th>
+                <th className="pb-3 text-left font-medium">Source</th>
+                <th className="pb-3 text-right font-medium">Time</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {entries.map((entry) => (
+                <tr key={entry.id} className="border-t border-[#1F1F1F]">
+                  <td className="py-3 text-white font-medium">{entry.id}</td>
+                  <td className="py-3 text-[#919191] capitalize">{entry.type}</td>
+                  <td className="py-3 text-right text-white">{entry.amount}</td>
+                  <td className="py-3 text-white">{entry.account}</td>
+                  <td className="py-3">
+                    <span className={`inline-flex items-center rounded-full px-2 py-1 text-xs font-semibold ${
+                      entry.status === "posted"
+                        ? "bg-[#0f2917] text-[#86efac]"
+                        : entry.status === "pending"
+                          ? "bg-[#2a1f0f] text-[#fbbf24]"
+                          : "bg-[#2a1212] text-[#f87171]"
+                    }`}>
+                      {entry.status}
+                    </span>
+                  </td>
+                  <td className="py-3 text-white">{entry.source}</td>
+                  <td className="py-3 text-right text-[#919191]">{entry.time}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </PageShell>
   )
