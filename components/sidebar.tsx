@@ -31,14 +31,14 @@ export function Sidebar() {
           href="/global-payouts"
           className={`${linkBaseClass} ${pathname === "/global-payouts" ? linkActive : linkInactive}`}
         >
-          <Send className="h-6 w-6" />
+          <Send className="h-4 w-4" />
           <span className="text-sm font-medium tracking-wide">GLOBAL PAYOUTS</span>
         </Link>
         <Link
           href="/ledger"
           className={`${linkBaseClass} ${pathname === "/ledger" ? linkActive : linkInactive}`}
         >
-          <BookOpen className="h-6 w-6" />
+          <BookOpen className="h-4 w-4" />
           <span className="text-sm font-medium tracking-wide">LEDGER</span>
         </Link>
         <Link
