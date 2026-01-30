@@ -37,9 +37,10 @@ Sidebar navigation links now route to the new pages (`/system-overview`, `/merch
 Added explicit warning/alert banners on each page to surface SLA breaches, escalations, and disabled endpoints.
 Sidebar now highlights the active route; all sidebar links route to the created pages.
 System Overview now points to `/`, and `/system-overview` redirects to `/` to ensure it displays the main dashboard content.
+Component files in `components/` (non-UI) renamed to camelCase and imports updated.
 
 # Executor's Feedback or Assistance Requests
-System Overview routing aligned to `/`. Please verify.
+Component file naming aligned to camelCase. Please verify.
 
 # Lessons
 None yet.
