@@ -27,7 +27,7 @@ Now extend the remaining sidebar pages (Merchants, Ledger, Compliance & Risk, Pr
 - [x] Create page shells for sidebar items
 - [x] Populate each page with operational content
 - [x] Add explicit state/warning affordances per page
-- [ ] Verify data density and navigation
+- [x] Verify data density and navigation
 
 # Current Status / Progress Tracking
 Inventory complete: only `app/page.tsx` exists; no other routes. Layout is shared via `app/layout.tsx`.
@@ -35,9 +35,10 @@ Created page shells using `components/page-shell.tsx` for: `app/system-overview/
 Populated each page with operational metrics and dense tables aligned to its domain (payouts, merchants, ledger, compliance, providers, webhooks).
 Sidebar navigation links now route to the new pages (`/system-overview`, `/merchants`, `/global-payouts`, `/ledger`, `/compliance-risk`, `/providers`, `/events-webhooks`).
 Added explicit warning/alert banners on each page to surface SLA breaches, escalations, and disabled endpoints.
+Sidebar now highlights the active route; all sidebar links route to the created pages.
 
 # Executor's Feedback or Assistance Requests
-Step 4 complete. Please confirm so I can proceed to Step 5 (verify data density and navigation).
+Step 5 complete. Please confirm the new pages and navigation work as expected.
 
 # Lessons
 None yet.
