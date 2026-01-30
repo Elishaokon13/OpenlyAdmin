@@ -45,7 +45,7 @@ export function Sidebar() {
           href="/compliance-risk"
           className={`${linkBaseClass} ${pathname === "/compliance-risk" ? linkActive : linkInactive}`}
         >
-          <ShieldAlert className="h-6 w-6" />
+          <ShieldAlert className="h-4 w-4" />
           <span className="text-sm font-medium tracking-wide">COMPLIANCE & RISK</span>
         </Link>
         <Link
