@@ -1,47 +1,67 @@
 "use client"
 
-import { ArrowUp, ArrowDown, ChevronsUpDown } from 'lucide-react'
-import { Area, AreaChart, ResponsiveContainer } from "recharts"
+import { AlertTriangle, ArrowDownRight, ArrowUpRight, CheckCircle2, ChevronsUpDown, Clock } from 'lucide-react'
 
 const data = [
   {
-    id: "TSLA",
-    name: "TSLA",
-    qty: 29,
-    price: 387,
-    invested: 2023,
-    current: 9343,
-    returns: 21.73,
-    trend: "up",
-    chartData: [
-      { value: 100 }, { value: 110 }, { value: 105 }, { value: 115 }, { value: 125 }, { value: 120 }, { value: 130 }, { value: 140 }, { value: 135 }, { value: 145 }, { value: 150 }
-    ]
+    id: "po_8f2c91",
+    merchant: "Atlas Supply Co.",
+    amount: 18590.42,
+    currency: "USD",
+    provider: "PayRails",
+    failureReason: "—",
+    retries: 0,
+    status: "completed",
+    updated: "2m ago",
+    href: "/payouts/po_8f2c91"
   },
   {
-    id: "AMD",
-    name: "AMD",
-    qty: 4,
-    price: 660,
-    invested: 7569,
-    current: 3603,
-    returns: -49.81,
-    trend: "down",
-    chartData: [
-      { value: 150 }, { value: 145 }, { value: 140 }, { value: 135 }, { value: 130 }, { value: 125 }, { value: 130 }, { value: 120 }, { value: 115 }, { value: 110 }, { value: 105 }
-    ]
+    id: "po_52c118",
+    merchant: "Cobalt Health",
+    amount: 7620.0,
+    currency: "USD",
+    provider: "Bankline",
+    failureReason: "Insufficient balance",
+    retries: 2,
+    status: "failed",
+    updated: "11m ago",
+    href: "/payouts/po_52c118"
   },
   {
-    id: "SKYLINE",
-    name: "SKYLINE",
-    qty: 39,
-    price: 858,
-    invested: 4916,
-    current: 2282,
-    returns: 34.15,
-    trend: "up",
-    chartData: [
-      { value: 100 }, { value: 105 }, { value: 110 }, { value: 115 }, { value: 112 }, { value: 118 }, { value: 125 }, { value: 122 }, { value: 130 }, { value: 135 }, { value: 140 }
-    ]
+    id: "po_3ac4f0",
+    merchant: "Northwind Markets",
+    amount: 44215.11,
+    currency: "EUR",
+    provider: "PayRails",
+    failureReason: "Compliance review",
+    retries: 1,
+    status: "retrying",
+    updated: "25m ago",
+    href: "/payouts/po_3ac4f0"
+  },
+  {
+    id: "po_01ff9a",
+    merchant: "Keystone Freight",
+    amount: 1299.95,
+    currency: "USD",
+    provider: "SwiftPay",
+    failureReason: "—",
+    retries: 0,
+    status: "pending",
+    updated: "42m ago",
+    href: "/payouts/po_01ff9a"
+  },
+  {
+    id: "po_aa12b8",
+    merchant: "Helios Labs",
+    amount: 9800.0,
+    currency: "USD",
+    provider: "Bankline",
+    failureReason: "Timeout from provider",
+    retries: 3,
+    status: "failed",
+    updated: "1h ago",
+    href: "/payouts/po_aa12b8"
   }
 ]
 
@@ -53,64 +73,63 @@ export function TickerList() {
           <tr className="text-[#919191] text-sm border-b border-transparent">
             <th className="pb-4 text-left font-medium pl-2">
               <div className="flex items-center gap-1 cursor-pointer hover:text-white transition-colors">
-                Company
+                Payout ID
                 <ChevronsUpDown className="h-4 w-4" />
               </div>
             </th>
-            <th className="pb-4 text-left font-medium w-[120px]"></th>
-            <th className="pb-4 text-right font-medium">Qty.</th>
-            <th className="pb-4 text-right font-medium">Mkt. Price</th>
-            <th className="pb-4 text-right font-medium">Invested</th>
-            <th className="pb-4 text-right font-medium">Current</th>
-            <th className="pb-4 text-right font-medium pr-2">Returns</th>
+            <th className="pb-4 text-left font-medium">Merchant</th>
+            <th className="pb-4 text-right font-medium">Amount</th>
+            <th className="pb-4 text-left font-medium">Provider</th>
+            <th className="pb-4 text-left font-medium">Failure Reason</th>
+            <th className="pb-4 text-right font-medium">Retries</th>
+            <th className="pb-4 text-left font-medium">Status</th>
+            <th className="pb-4 text-right font-medium pr-2">Last Update</th>
           </tr>
         </thead>
         <tbody>
           {data.map((item) => (
             <tr 
               key={item.id} 
-              className={`group transition-colors border-b border-transparent last:border-0 ${
-                item.id === 'TSLA' ? 'bg-[#1A1A1A]' : 'hover:bg-[#1A1A1A]'
-              }`}
+              onClick={() => (window.location.href = item.href)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter") {
+                  window.location.href = item.href
+                }
+              }}
+              role="link"
+              tabIndex={0}
+              className="group transition-colors border-b border-transparent last:border-0 hover:bg-[#1A1A1A] cursor-pointer"
             >
               <td className="py-4 pl-2 rounded-l-xl">
                 <div className="flex items-center gap-3">
-                  <span className="font-bold text-white">{item.name}</span>
+                  <span className="font-semibold text-white">{item.id}</span>
                 </div>
               </td>
-              <td className="py-4">
-                <div className="h-10 w-24">
-                  <ResponsiveContainer width="100%" height="100%">
-                    <AreaChart data={item.chartData}>
-                      <defs>
-                        <linearGradient id={`gradient-${item.id}`} x1="0" y1="0" x2="0" y2="1">
-                          <stop offset="0%" stopColor={item.trend === 'up' ? '#22c55e' : '#ef4444'} stopOpacity={0.3} />
-                          <stop offset="100%" stopColor={item.trend === 'up' ? '#22c55e' : '#ef4444'} stopOpacity={0} />
-                        </linearGradient>
-                      </defs>
-                      <Area
-                        type="monotone"
-                        dataKey="value"
-                        stroke={item.trend === 'up' ? '#22c55e' : '#ef4444'}
-                        strokeWidth={2}
-                        fill={`url(#gradient-${item.id})`}
-                      />
-                    </AreaChart>
-                  </ResponsiveContainer>
-                </div>
+              <td className="py-4 text-left text-white font-medium">{item.merchant}</td>
+              <td className="py-4 text-right text-white font-medium">
+                {item.amount.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} {item.currency}
               </td>
-              <td className="py-4 text-right text-white font-medium">{item.qty}</td>
-              <td className="py-4 text-right text-white font-medium">${item.price}</td>
-              <td className="py-4 text-right text-white font-medium">${item.invested}</td>
-              <td className={`py-4 text-right font-medium ${item.trend === 'up' ? 'text-[#4ADE80]' : 'text-[#F87171]'}`}>
-                ${item.current}
+              <td className="py-4 text-left text-white font-medium">{item.provider}</td>
+              <td className="py-4 text-left text-[#919191]">{item.failureReason}</td>
+              <td className="py-4 text-right text-white font-medium">{item.retries}</td>
+              <td className="py-4 text-left">
+                <span className={`inline-flex items-center gap-2 px-2 py-1 rounded-full text-xs font-medium border ${
+                  item.status === "completed"
+                    ? "bg-[#0f2917] text-[#86efac] border-[#1d3b26]"
+                    : item.status === "failed"
+                      ? "bg-[#2a1212] text-[#f87171] border-[#3b1d1d]"
+                      : item.status === "retrying"
+                        ? "bg-[#1b2332] text-[#60a5fa] border-[#2b3342]"
+                        : "bg-[#2a1f0f] text-[#fbbf24] border-[#3b2d1a]"
+                }`}>
+                  {item.status === "completed" && <CheckCircle2 className="h-3 w-3" />}
+                  {item.status === "failed" && <AlertTriangle className="h-3 w-3" />}
+                  {item.status === "retrying" && <ArrowUpRight className="h-3 w-3" />}
+                  {item.status === "pending" && <Clock className="h-3 w-3" />}
+                  <span className="capitalize">{item.status}</span>
+                </span>
               </td>
-              <td className={`py-4 text-right font-medium pr-2 rounded-r-xl ${item.trend === 'up' ? 'text-[#4ADE80]' : 'text-[#F87171]'}`}>
-                <div className="flex items-center justify-end gap-1">
-                  {item.trend === 'up' ? <ArrowUp className="h-4 w-4" /> : <ArrowDown className="h-4 w-4" />}
-                  ${Math.abs(item.returns)}
-                </div>
-              </td>
+              <td className="py-4 text-right text-[#919191] pr-2 rounded-r-xl">{item.updated}</td>
             </tr>
           ))}
         </tbody>
