@@ -14,8 +14,8 @@ export function Sidebar() {
     <aside className="sticky top-24 h-[calc(100vh-8rem)] md:w-48 lg:w-64 bg-[#0D0D0D] rounded-2xl hidden md:flex flex-col p-8 overflow-y-auto">
       <nav className="flex flex-col gap-8">
         <Link
-          href="/system-overview"
-          className={`${linkBaseClass} ${pathname === "/system-overview" ? linkActive : linkInactive}`}
+          href="/"
+          className={`${linkBaseClass} ${pathname === "/" || pathname === "/system-overview" ? linkActive : linkInactive}`}
         >
           <LayoutDashboard className="h-6 w-6" />
           <span className="text-sm font-medium tracking-wide">SYSTEM OVERVIEW</span>
