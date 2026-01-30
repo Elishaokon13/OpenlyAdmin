@@ -8,27 +8,27 @@ export function DashboardMetrics() {
       <div className="flex flex-col gap-2">
         <div className="flex items-center gap-2 text-gray-400">
           <Wallet className="h-5 w-5" />
-          <span className="text-lg">Current</span>
+          <span className="text-lg">Total Funds Under Management</span>
         </div>
-        <div className="text-5xl md:text-4xl lg:text-5xl font-bold text-white">$6,810</div>
+        <div className="text-5xl md:text-4xl lg:text-5xl font-bold text-white">$6,810,240,900</div>
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 xl:gap-16">
         <div className="flex flex-col gap-1">
-          <span className="text-gray-400 text-sm">Invested</span>
-          <span className="text-2xl md:text-xl lg:text-2xl font-semibold text-white">$5,220</span>
+          <span className="text-gray-400 text-sm">Total Locked Funds</span>
+          <span className="text-2xl md:text-xl lg:text-2xl font-semibold text-white">$1,942,550,120</span>
         </div>
         <div className="flex flex-col gap-1">
-          <span className="text-gray-400 text-sm">Total Returns</span>
-          <span className="text-2xl md:text-xl lg:text-2xl font-semibold text-[#86efac]">+$1,590</span>
+          <span className="text-gray-400 text-sm">Provider Balances</span>
+          <span className="text-2xl md:text-xl lg:text-2xl font-semibold text-white">$4,187,904,330</span>
         </div>
         <div className="flex flex-col gap-1">
-          <span className="text-gray-400 text-sm">Net Returns</span>
-          <span className="text-2xl md:text-xl lg:text-2xl font-semibold text-[#86efac]">+30.46%</span>
+          <span className="text-gray-400 text-sm">Payout Queue Depth</span>
+          <span className="text-2xl md:text-xl lg:text-2xl font-semibold text-white">12,804</span>
         </div>
         <div className="flex flex-col gap-1">
-          <span className="text-gray-400 text-sm">1 Day Returns</span>
-          <span className="text-2xl md:text-xl lg:text-2xl font-semibold text-[#86efac]">+$142.50</span>
+          <span className="text-gray-400 text-sm">Failed Payouts (24h)</span>
+          <span className="text-2xl md:text-xl lg:text-2xl font-semibold text-[#fca5a5]">1,482</span>
         </div>
       </div>
     </div>
