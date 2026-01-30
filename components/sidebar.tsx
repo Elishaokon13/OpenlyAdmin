@@ -18,49 +18,49 @@ export function Sidebar() {
           className={`${linkBaseClass} ${pathname === "/" || pathname === "/system-overview" ? linkActive : linkInactive}`}
         >
           <LayoutDashboard className="h-4 w-4" />
-          <span className="text-sm font-medium tracking-wide">SystemOverview</span>
+          <span className="text-sm font-medium tracking-wide">SYSTEM OVERVIEW</span>
         </Link>
         <Link
           href="/merchants"
           className={`${linkBaseClass} ${pathname === "/merchants" ? linkActive : linkInactive}`}
         >
           <Building2 className="h-4 w-4" />
-          <span className="text-sm font-medium tracking-wide">Merchants</span>
+          <span className="text-sm font-medium tracking-wide">MERCHANTS</span>
         </Link>
         <Link
           href="/global-payouts"
           className={`${linkBaseClass} ${pathname === "/global-payouts" ? linkActive : linkInactive}`}
         >
           <Send className="h-4 w-4" />
-          <span className="text-sm font-medium tracking-wide">GlobalPayouts</span>
+          <span className="text-sm font-medium tracking-wide">GLOBAL PAYOUTS</span>
         </Link>
         <Link
           href="/ledger"
           className={`${linkBaseClass} ${pathname === "/ledger" ? linkActive : linkInactive}`}
         >
           <BookOpen className="h-4 w-4" />
-          <span className="text-sm font-medium tracking-wide">Ledger</span>
+          <span className="text-sm font-medium tracking-wide">LEDGER</span>
         </Link>
         <Link
           href="/compliance-risk"
           className={`${linkBaseClass} ${pathname === "/compliance-risk" ? linkActive : linkInactive}`}
         >
           <ShieldAlert className="h-4 w-4" />
-          <span className="text-sm font-medium tracking-wide">ComplianceRisk</span>
+          <span className="text-sm font-medium tracking-wide">COMPLIANCE & RISK</span>
         </Link>
         <Link
           href="/providers"
           className={`${linkBaseClass} ${pathname === "/providers" ? linkActive : linkInactive}`}
         >
           <Server className="h-4 w-4" />
-          <span className="text-sm font-medium tracking-wide">Providers</span>
+          <span className="text-sm font-medium tracking-wide">PROVIDERS</span>
         </Link>
         <Link
           href="/events-webhooks"
           className={`${linkBaseClass} ${pathname === "/events-webhooks" ? linkActive : linkInactive}`}
         >
           <Webhook className="h-4 w-4" />
-          <span className="text-sm font-medium tracking-wide">EventsWebhooks</span>
+          <span className="text-sm font-medium tracking-wide">EVENTS & WEBHOOKS</span>
         </Link>
       </nav>
 
