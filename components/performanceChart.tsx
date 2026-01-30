@@ -24,7 +24,7 @@ export function PerformanceChart() {
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 md:gap-2 lg:gap-4">
         <div className="flex flex-col gap-2">
           <h2 className="text-lg sm:text-xl font-medium text-white">System-wide Payout Volume</h2>
-          <div className="grid grid-cols-1 xs:grid-cols-2 gap-2 text-xs text-gray-400">
+          {/* <div className="grid grid-cols-1 xs:grid-cols-2 gap-2 text-xs text-gray-400">
             <div className="flex items-center gap-2 px-2.5 py-1 bg-[#1A1A1A] rounded-full border border-[#333]">
               <div className="w-2 h-2 rounded-full bg-[#86efac]" />
               <span className="font-medium text-white">Successful</span>
@@ -37,7 +37,7 @@ export function PerformanceChart() {
               <div className="w-2 h-2 rounded-full bg-[#60a5fa]" />
               <span className="font-medium text-white">Provider Health</span>
             </div>
-          </div>
+          </div> */}
         </div>
         
         <div className="flex flex-wrap items-center gap-2 sm:gap-3 md:gap-2 lg:gap-4">
