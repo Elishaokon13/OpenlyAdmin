@@ -30,6 +30,10 @@ export default function ComplianceRiskPage() {
         ))}
       </div>
 
+      <div className="rounded-2xl border border-[#3b1d1d] bg-[#1a0f10] p-4 text-sm text-[#fca5a5]">
+        Critical: 7 escalations pending approval beyond SLA. Escalate to compliance lead.
+      </div>
+
       <div className="rounded-2xl border border-[#1F1F1F] bg-[#0D0D0D] p-6">
         <div className="flex items-center justify-between">
           <h3 className="text-sm font-semibold text-white">Compliance Case Queue</h3>
