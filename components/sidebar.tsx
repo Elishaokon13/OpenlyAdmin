@@ -24,7 +24,7 @@ export function Sidebar() {
           href="/merchants"
           className={`${linkBaseClass} ${pathname === "/merchants" ? linkActive : linkInactive}`}
         >
-          <Building2 className="h-6 w-6" />
+          <Building2 className="h-4 w-4" />
           <span className="text-sm font-medium tracking-wide">MERCHANTS</span>
         </Link>
         <Link
