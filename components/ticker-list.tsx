@@ -149,7 +149,7 @@ export function TickerList() {
                 {item.amount.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} {item.currency}
               </td>
               <td className="py-4 text-left text-white font-medium">{item.provider}</td>
-              <td className="py-4 text-left text-[#919191]">{item.failureReason}</td>
+              {/* <td className="py-4 text-left text-[#919191]">{item.failureReason}</td> */}
               <td className="py-4 text-right text-white font-medium">{item.retries}</td>
               <td className="py-4 text-left">
                 <span className={`inline-flex items-center gap-2 px-2 py-1 rounded-full text-xs font-medium border ${
